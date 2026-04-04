@@ -1,0 +1,349 @@
+*{
+
+box-sizing: border-box;
+
+}
+
+body{
+
+    margin: 0;
+    font-size: 24px;
+    font-family: "Donegal One", serif;
+    background: #91E0F2;
+    color:rgb(236, 236, 236) ;
+    
+
+}
+
+header {
+    background:  #6b6fbd;
+
+    font-family: "Cinzel", serif;
+    
+    color: #ffffff;
+    padding: 0.1rem 0.3rem;
+}
+
+
+
+header h1 {
+    font-size: 1rem;
+    text-align: center;
+    padding: #364552;
+}
+
+.back-btn{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px 15px;
+
+    background: #6b6fbd;
+    color: #ffffff;
+    text-decoration: none;
+
+    border: 2px solid #038C7F;
+    border-radius: 8px;
+
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+/* hover */
+.back-btn:hover{
+    background: #ffffff;
+    color: #6b6fbd;
+    box-shadow: 0 0 15px #038C7F;
+    transform: scale(1.05);
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: calc(100vh - 80px); /* altura menos header */
+}
+
+.card{
+    display: flex;
+    width: 1000px;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* CONTENEDOR IMAGEN */
+.image-box{
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+
+/* IMÁGENES */
+.image-box img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* 🔥 NO recorta */
+    transition: opacity 0.6s ease;
+}
+
+/* estado */
+.img-hover{
+    opacity: 0;
+}
+
+/* HOVER SOLO EN IMAGEN */
+.image-box:hover .img-hover{
+    opacity: 1;
+}
+
+.image-box:hover .img-normal{
+    opacity: 0;
+}
+
+
+
+/* TEXTO */
+.text-box{
+    width: 50%;
+    padding: 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background: rgba(0,0,0,0.6); /* 🔥 fondo oscuro */
+    border-left: 2px solid #0D0D0D;
+
+    backdrop-filter: blur(6px); /* 🔥 efecto vidrio */
+}
+
+.text-box p{
+    font-size: 0.95rem;
+    line-height: 1.6;
+
+    max-height: 60%;
+    overflow-y: auto;
+
+    padding-right: 10px;
+}
+
+.text-box p::-webkit-scrollbar{
+    width: 6px;
+}
+
+.text-box p::-webkit-scrollbar-thumb{
+    background: #7665FF;
+    border-radius: 10px;
+}
+
+.hud{
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+/* DESTACADOS */
+span{
+    color: #91E0F2;
+    font-weight: bold;
+}
+
+/* CONTENEDOR IMAGEN */
+.image-box{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* IMÁGENES */
+.image-box img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: 
+        opacity 0.6s ease,
+        transform 0.6s ease,
+        filter 0.6s ease;
+}
+
+/* estado inicial */
+.img-hover{
+    opacity: 0;
+    transform: scale(1.1);
+    filter: blur(5px) brightness(1.5);
+}
+
+/* HOVER → TRANSFORMACIÓN */
+.image-box:hover .img-hover{
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0) brightness(1);
+}
+
+.image-box:hover .img-normal{
+    opacity: 0;
+    transform: scale(0.95);
+    filter: blur(3px);
+}
+
+.card:hover{
+    box-shadow: 0 0 40px #7665FF;
+}
+
+.hud{
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* cada stat */
+.stat{
+    margin-bottom: 10px;
+}
+
+/* nombre */
+.stat span{
+    display: block;
+    font-size: 0.8rem;
+    margin-bottom: 3px;
+}
+
+/* barra base */
+.bar{
+    width: 100%;
+    height: 8px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* relleno */
+.fill{
+    height: 100%;
+    transition: width 1s ease;
+}
+
+.daño{
+    width: 75%;
+}
+
+.velocidad{
+    width: 50%;
+}
+
+.Destreza{
+    width: 100%;
+}
+
+.resistencia{
+    width: 25%;
+}
+
+.Potencial{
+    width: 75%;
+}
+
+.Alcance{
+    width: 100%;
+}
+
+
+
+/* colores */
+.daño{ background: red; }
+.velocidad{ background: cyan; }
+.Destreza{ background: rgb(255, 60, 0); }
+.resistencia{ background: yellow;}
+.Potencial{ background: lime; }
+.Alcance{background:purple ;}
+
+
+.image-box:hover ~ .text-box .daño{
+    width: 100%;
+}
+
+.image-box:hover ~ .text-box .velocidad{
+    width: 100%;
+}
+
+.image-box:hover ~ .text-box .Destreza{
+    width: 100%;
+}
+
+.image-box:hover ~ .text-box .resistencia{
+    width: 100%;
+}
+
+.image-box:hover ~ .text-box .Potencial{
+    width: 100%;
+}
+
+.image-box:hover ~ .text-box .Alcance{
+    width: 100%;
+}
+
+.fill{
+    box-shadow: 0 0 10px currentColor;
+}
+
+
+/*Celular*/
+@media (max-width: 720px){
+
+    body{
+        font-size: 18px;
+    }
+
+
+
+    .card{
+        gap: 10px;
+    }
+
+    .card{
+        flex-direction: column; /* 🔥 cambia a vertical */
+        width: 90%;
+        height: auto;
+    }
+
+
+    .image-box{
+        width: 100%;
+        height: 300px; /* 🔥 controlas tamaño de imagen */
+    }
+
+    .text-box p{
+        order: 2; /* 🔥 texto abajo */
+    }
+
+    .hud{
+        order: 1; /* 🔥 HUD arriba */
+    }
+
+    .text-box{
+        width: 100%;
+        height: auto;
+        display: flex;
+    }
+
+    .text-box p{
+    max-height: none; /* 🔥 quita límite en móvil */
+    overflow: visible;
+    }  
+    
+    .hud{
+    margin-top: 10px;
+    }
+
+
+}
+
+
+
+
