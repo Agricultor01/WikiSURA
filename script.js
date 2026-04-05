@@ -96,6 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "ELEMENTOS Ahora es también un sitio web… .",
         "El sitio oficial que recopila a mis personajes…",
         "clickea el que gustes y descubre su historia… ",
+        "Música usada: Ibis de Gozen Yoji y Asayake Ni Tsuki",
         "Algunas imágenes cambian al posicionar el cursor sobre ellas…",
         "Otras cambian al scrollear sobre ellas descubre cual es cual… ",
         "A=Muy bueno... ",
